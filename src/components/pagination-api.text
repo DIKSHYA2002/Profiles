@@ -1,0 +1,54 @@
+// online api
+import Card from "./components/Card";
+import { useState,useEffect } from "react";
+function App() {
+  const [arr,setarr] = useState([]);
+  const [pageArr, setPageArr] = useState([1,2,3,4,5,6,7,8,9,10]);
+  const [page,setPage] = useState(1);
+  
+  const getData = async()=>{
+    await fetch(`https://api.instantwebtools.net/v1/passenger?page=${page}o&size=10`,{method:'GET'})
+    .then((res)=>res.json()).then((data)=>{
+      setarr(data.data);
+    });
+  };
+  const handlePage = (el)=>{
+    setPage(el);
+  };
+
+useEffect(()=>{
+  getData();
+},[page]);
+
+
+
+  return (
+   <>
+   {
+    arr.length>0?(
+      <div>
+        {
+          arr.map((el)=>{
+            return (
+              <Card
+              passenger ={el.name}
+              image={el.airline[0].logo}
+              country={el.airline[0].country}
+              trips={el.trips}
+              />
+            );
+          })
+        }
+      </div>
+    ):(<h1>No Data Found</h1>)
+   }
+   {
+    pageArr.map((el)=>{
+      return <button onClick={()=> handlePage(el)}>{el}</button>
+    })
+   } 
+   </>
+  );
+}
+
+export default App;
