@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.profile img{
+     max-width: 60%;
+     max-height: 60%;
+     border-radius: 50%;
+  border: 2px white solid;
+ margin: 1rem;
+ background-color: white;
+}
+.profile .bottom{
+   padding: 1rem;
+    text-align: center;
+}
+.profile .username{
+    font-weight: 800;
+}
+.profile{
+   width: 20rem;
+   height: 60vh;
+   background-color: rgb(69, 69, 69);
+  margin: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+
+
+.Lists{
+    display: flex;
+    flex-wrap: wrap;
+ flex-direction: row;
+ justify-content: left;
+ background-color: rgb(20, 20, 20);
+    
+}
+
+
+h1{
+
+    text-align: center;
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+.update-profile{
+    display: flex;
+    flex-direction: column;   
+     margin: 1rem;
+     background-color: rgb(69, 69, 69);
+     padding: 1rem;
+
+     width: 95%;
+     color: white;
+}
+
+.update-profile .top{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+}
+.update-profile .right{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.update-profile .insights{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 5rem;
+}
+.insights div div{
+    font-size: 2rem;
+}
+.update-profile .bottom{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.update-profile img{
+    height: 15rem;
+    width: 15rem;
+    background-color: white;
+    border-radius: 50%;
+}
+body{
+    background-color: rgb(20, 20, 20);
+}
+.pageButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.pageButtons button{
+    padding: 0.7rem;
+    background-color: rgb(157, 74, 235);
+}
+button:active{
+    background-color: aliceblue;
+}
+button::after{
+    background-color: white;
+}

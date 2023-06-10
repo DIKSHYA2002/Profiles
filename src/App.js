@@ -1,7 +1,9 @@
+import ProfileLists from "./components/ProfileLists";
+
 function App() {
  return(
   <>
-  .assignment
+    <ProfileLists/>
   </>
  )
 }
