@@ -40,6 +40,11 @@ const ProfileCard = (props) => {
                     <div className="username">{props.name}</div>
                     <div className="bio">{props.bio}</div>
                 </div>
+                <div className="buttons">
+                    <button onClick={props.onUpdate}>Update</button>
+                    <button onClick={props.onDelete}>Delete</button>
+            
+                </div>
             </div>
         </>
     )
