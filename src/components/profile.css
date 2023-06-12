@@ -212,3 +212,8 @@ input[type="checkbox"]
 .edit-profile{
   display: none;
 }
+
+a{
+    color: white;
+    text-decoration: none;
+}
